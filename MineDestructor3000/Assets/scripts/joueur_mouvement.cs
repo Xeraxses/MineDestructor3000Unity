@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class joueur_mouvement : NetworkBehaviour
 {
@@ -56,6 +57,9 @@ public class joueur_mouvement : NetworkBehaviour
         } else {
         
         }   
+        if(mouv_Y > 0){
+            SceneManager.LoadScene(2); 
+        }
          
         // float mouv_X = Input.GetAxisRaw("Horizontal");
         // float mouv_Y = Input.GetAxisRaw("Vertical");
